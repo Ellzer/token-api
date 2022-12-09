@@ -79,14 +79,13 @@ That's how I generated 3 `.json` files
 
 ### Ethers.js
 
-To get information from the blockchain I needed to use a web3 library, web3.js and Ethers.js are the most famous ones. I chose ethers.js for the following reasons.
+To get information from the blockchain I needed to use a web3 library, web3.js and Ethers.js are the most famous ones. I chose ethers.js for the following reasons:
 
 - user-friendly API structure
 - smaller bundle size
 - well tested
 - extensive and concise documentation
 - well maintained
-- less buggy
 - written in TypeScript
 
 ### Infura provider
@@ -99,4 +98,6 @@ It is the method `getBalancesByAddressAndNetwork` from the `BalanceService` that
 
 ### Trade-offs you might have made
 
-I think I would have directly use to [Zapper's API](https://api.zapper.fi/api/static/index.html#/Balances/BalanceController_getBalances) but then it might have been too much of a shortcut.
+I wish I had more time to fully test the Balance Service, but I focused my work on having clear and well abstracted code.
+
+A simpler solution would have been using [Zapper's API](https://api.zapper.fi/api/static/index.html#/Balances/BalanceController_getBalances) but then it might have been too much of a shortcut.
