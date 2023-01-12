@@ -1,5 +1,3 @@
-# Full-stack coding test • Multis
-
 ## Description
 
 Small API using [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
@@ -59,10 +57,6 @@ $ yarn run test:cov
 
 ## Reasonning behind solution
 
-### NestJS starter repository
-
-As I'm a beginner to NestJS and did not wanted to much hassle configuring it I started with the CLI's boilerplate solution. It is quite well documented and it helped me progress fast with the framework.
-
 ### ERC20 tokens list
 
 The list of tokens available in Coingecko per network is at [TokenList](https://tokenlists.org/token-list?url=https://gateway.ipfs.io/ipns/tokens.uniswap.org).
@@ -95,9 +89,3 @@ I first instantiated Ethers.js provider using Etherscan API but it was quite slo
 ### Solution explained
 
 It is the method `getBalancesByAddressAndNetwork` from the `BalanceService` that does all the work. Using a map it gets the ERC20 balance for every token of the ERC20 array with ethers.js. After querying the token prices from CoinGecko's API, it maps the new array and adds an attibute with the balance in usd for every token entry, it is calculated using BigNumber utils from Ethers.
-
-### Trade-offs you might have made
-
-I wish I had more time to fully test the Balance Service, but I focused my work on having clear and well abstracted code.
-
-A simpler solution would have been using [Zapper's API](https://api.zapper.fi/api/static/index.html#/Balances/BalanceController_getBalances) but then it might have been too much of a shortcut.
